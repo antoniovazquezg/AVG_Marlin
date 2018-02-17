@@ -114,14 +114,6 @@
 #define ZPROBE_Y_OFFSET        0
 #define ZPROBE_Z_OFFSET        -19.1
 
-/* Bed Leveling Type
- * Type of bed leveling you want to use.
- * You can choose one, even if you don't have a z probe (Manual probing)
- * or not use one at all.
- */
-//#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
-
 /* Autolevel / Autocalibration Grid Points
  * Number of points to probe on autolevel / autocalibration routines
  * min 3 max 7
@@ -257,7 +249,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "Emilio1625" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "AVG" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -719,21 +711,21 @@
   #endif
 
   // height from z=0 to home position
-  //#define DELTA_HEIGHT 250.00 // get this value from auto calibrate
+  #define DELTA_HEIGHT 336.12 // get this value from auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // get these from auto calibrate
+  #define DELTA_ENDSTOP_ADJ { 0.00, -0.79, -1.83 } // get these from auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
   #if ENABLED(LINEAR_PLUS)
     #define DELTA_RADIUS 134.34 //mm  Get this value from auto calibrate
   #else
-    #define DELTA_RADIUS 101.31 //mm  Get this value from auto calibrate
+    #define DELTA_RADIUS 100.07 //mm  Get this value from auto calibrate
   #endif
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // get these values from auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -0.45, +1.55, -1.10 } // get these values from auto calibrate
 
   // delta radius and diaginal rod adjustments measured in mm
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -873,7 +865,7 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                 10.0
+#define DEFAULT_XJERK                 5.0
 #define DEFAULT_YJERK                 DEFAULT_XJERK
 #define DEFAULT_ZJERK                 DEFAULT_XJERK // Must be same as XY for delta
 #define DEFAULT_EJERK                 20.0
@@ -1002,7 +994,7 @@
 #define XY_PROBE_SPEED 4000
 
 // Speed for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_SPEED_FAST (HOMING_FEEDRATE_Z / 4)
+#define Z_PROBE_SPEED_FAST (HOMING_FEEDRATE_Z / 2)
 
 // Speed for the "accurate" probe of each point
 #define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 3)
@@ -1248,8 +1240,8 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
-#define AUTO_BED_LEVELING_UBL
+#define AUTO_BED_LEVELING_BILINEAR
+//#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**

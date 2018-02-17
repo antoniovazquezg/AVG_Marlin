@@ -22,6 +22,8 @@
 # Our automatic versioning scheme generates the following file
 # NEVER put it in the repository
 _Version.h
+./Marlin/configuration.h
+./Marlin/configuration_adv.h
 
 #
 # OS
@@ -143,3 +145,5 @@ CMakeListsPrivate.txt
 
 #CLion
 cmake-build-*
+Marlin/Configuration.h
+Marlin/Configuration_adv.h
