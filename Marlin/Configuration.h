@@ -68,7 +68,7 @@
  * I recommend to get them from autocalibration 
  * NEEDS EEPROM CLEAR!!
  */
-#define DELTA_HEIGHT 320
+#define DELTA_HEIGHT 335.46
 
 /* Steppers Direction
  * Uncomment if your stepper move backwards
@@ -112,7 +112,7 @@
  */
 #define ZPROBE_X_OFFSET        0
 #define ZPROBE_Y_OFFSET        0
-#define ZPROBE_Z_OFFSET        -19.1
+#define ZPROBE_Z_OFFSET        -18.7
 
 /* Autolevel / Autocalibration Grid Points
  * Number of points to probe on autolevel / autocalibration routines
@@ -150,7 +150,6 @@
  * Leave commented if you're using a single nozzle
  */
 //#define NOZZLE_OFFSET_X 0
-//#define NOZZLE_OFFSET_Y 0
 //#define NOZZLE_OFFSET_Y 0
 
 /* Extruder(s) Stepper Direction

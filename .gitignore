@@ -137,6 +137,7 @@ vc-fileutils.settings
 #VScode
 .vscode
 .vscode/c_cpp_properties.json
+.vscode/launch.json
 
 #cmake
 CMakeLists.txt
@@ -147,3 +148,4 @@ CMakeListsPrivate.txt
 cmake-build-*
 Marlin/Configuration.h
 Marlin/Configuration_adv.h
+Marlin/Configuration.h
