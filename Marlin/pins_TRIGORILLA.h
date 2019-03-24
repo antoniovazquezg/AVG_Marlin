@@ -21,23 +21,6 @@
  */
 
 /**
-<<<<<<< HEAD
- * Arduino Mega with RAMPS v1.4 adjusted pin assignments
- */
-
-#if HOTENDS > 2 || E_STEPPERS > 2
-  #error "TRIGORILLA supports up to 2 hotends / E-steppers. Comment out this line to continue."
-#endif
-
-#define BOARD_NAME "TRIGORILLA"
-#define IS_RAMPS_EFB
-#define FAN1_PIN 7
-#define FAN2_PIN 44
-#define HEATER_1_PIN 45
-#define TEMP_3_PIN 12
-
-#include "pins_RAMPS.h"
-=======
  * Arduino Mega with RAMPS v1.4 for Anycubic
  *
  * Defines RAMPS_D44_PIN 44
@@ -62,4 +45,3 @@
 #undef E1_DIR_PIN
 #undef E1_ENABLE_PIN
 #undef E1_CS_PIN
->>>>>>> bugfix-1.1.x

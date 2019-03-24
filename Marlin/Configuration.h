@@ -62,14 +62,6 @@
  */
 #define HEAT_BED
 
-/* Delta Height
- * Printable height of your printer in mm
- * For all the other delta parameters,
- * I recommend to get them from autocalibration 
- * NEEDS EEPROM CLEAR!!
- */
-#define DELTA_HEIGHT 335.46
-
 /* Steppers Direction
  * Uncomment if your stepper move backwards
  * Enable for TMC2100 if you didn't made any change to the stock cables
@@ -1396,7 +1388,7 @@
 // For DELTA this is the top-center of the Cartesian print volume.
 //#define MANUAL_X_HOME_POS 0
 //#define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS DELTA_HEIGHT // Distance between the nozzle to printbed after homing
+#define MANUAL_Z_HOME_POS DELTA_HEIGHT-5 .0 // Distance between the nozzle to printbed after homing
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
 //
